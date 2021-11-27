@@ -12,7 +12,7 @@ First, clone this repository. Navigate to the directory containing repository in
 4. "Quit" to exit MySQL shell
 5. Cd into main directory
 6. *OPTIONAL* In your terminal, enter "npm run seeds" to run the seed data 
-7. In your terminal, enter "npm start"
+7. In your terminal, enter "npm start" to start the server and deploy the application.
 
 
 ## Built With:
