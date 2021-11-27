@@ -6,15 +6,34 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 // get all products
 router.get('/', (req, res) => {
   // find all products
-  // be sure to include its associated Category and Tag data
+  try {
+    const productData = await Product.findAll({
+      // Add Product as a second model to JOIN with
+      include: [Category,{ model: Tag, through: ProductTag }],
+    });
+    res.status(200).json(productData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 // get one product
 router.get('/:id', (req, res) => {
   // find a single product by its `id`
   // be sure to include its associated Category and Tag data
+  try {
+    const oneProduct = await findByPk(req.params.id);
+    if (!oneProduct) {  
+      res.status(404).json({ message: 'No Product found with that id!' });
+    return;
+  }
+    else {
+      res.status(200).json(oneProduct)
+    }
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
-
 // create new product
 router.post('/', (req, res) => {
   /* req.body should look like this...
