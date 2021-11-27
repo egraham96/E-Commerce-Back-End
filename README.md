@@ -4,9 +4,16 @@
 This week's homework required us to build the back end for an e-commerce site by utilizing the Express.js API to use Sequelize to interact with a MySQL database. 
 
 ## Installation Instructions:
-Ideally, you would use this application by visting the deployed application link on Heroku. If you would like to use this application without Heroku, use the following steps:
+First, clone this repository. Navigate to the directory containing repository in your terminal. Then, Navigate to the Develop folder. next, open your terminal. 
 
-First, clone this repository. Navigate to the directory containing repository in your terminal. Navigate to the Develop folder. In your terminal, enter "npm install" to install all of the application's dependencies. If "npm install" does not work on its own, try to first enter "npm install express" followed by "npm install path" followed by "npm install file-system". Then, in your terminal, type in "node server.js." Navigate to the link provided: http://localhost:${PORT}.
+1. In your terminal, enter "npm install" to install all of the application's dependencies. 
+2. Then, cd into "db". Enter mySQL shell by using "mysql -u root -p" command and entering your credentials.
+3. While in the MySQL shell, enter "source schema.sql"
+4. "Quit" to exit MySQL shell
+5. Cd into main directory
+6. *OPTIONAL* In your terminal, enter "npm run seeds" to run the seed data 
+7. In your terminal, enter "npm start"
+
 
 ## Built With:
 * Javascript
@@ -19,7 +26,7 @@ First, clone this repository. Navigate to the directory containing repository in
 
 
 ## Deployed Links:
-* [Link to GitHub Repo](https://github.com/egraham96/Note-Taker)
+* [Link to GitHub Repo](https://github.com/egraham96/E-Commerce-Back-End)
 
 ## Preview of Working Application:
 ![Video of Deployed Application](./Assets/ScreenshotofDeployedApplication.PNG)
