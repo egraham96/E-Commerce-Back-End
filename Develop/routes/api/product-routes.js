@@ -70,7 +70,7 @@ router.put('/:id', async (req, res) => {
        res.status(404).json({ message: 'No Product found with that id!' })
       }
      else { 
-       res.status(200).json({message: `Product with id: ${req.params.id} deleted`}) 
+       res.status(200).json(productInfo) 
      }
    }
    catch { 

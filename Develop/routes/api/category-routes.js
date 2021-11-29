@@ -60,7 +60,7 @@ router.put('/:id', async (req, res) => {
       return;
      }
     else { 
-      res.status(200).json({message: `Category with id: ${req.params.id} deleted`}) 
+      res.status(200).json(categoryInfo) 
     }
   }
   catch { 
